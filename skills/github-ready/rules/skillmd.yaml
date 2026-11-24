@@ -1,0 +1,47 @@
+# SKILL.md 的检查数据：简介（name 和 description）与正文。完整要求见 references/superpowers-standard.md。
+name_pattern: "^[a-z0-9]+(-[a-z0-9]+)*$"
+name_max: 64
+description_max: 1024           # 规范的上限，超过算必须修
+description_recommended: 500    # 超过标成 suspect
+# 以下三组词命中的一律标成 suspect，由人复查。
+when_markers:                   # 一个都找不到时报
+  - "时使用"
+  - "时调用"
+  - "时用"
+  - "use when"
+  - "use this skill when"
+  - "use whenever"
+  - "trigger when"
+person_words:                   # 第一人称、第二人称
+  - "我可以"
+  - "我会"
+  - "我能"
+  - "帮你"
+  - "你可以"
+  - "您"
+  - "i can help"
+  - "i will help"
+  - "i'll help"
+  - "you can use"
+workflow_words:                 # 表示步骤的词
+  - "然后"
+  - "接着"
+  - "随后"
+  - "首先"
+  - "第一步"
+  - "确认后"
+  - " then "
+  - "first,"
+  - "step 1"
+  - "followed by"
+# —— 正文 ——
+body_max_lines: 500             # 超过标成 suspect
+reference_toc_lines: 300        # 附带的 Markdown 文件超过这个行数要有目录
+# skill 文件夹里常见的子文件夹名。正文提到这些文件夹下的文件时，脚本去核对文件在不在。
+conventional_dirs:
+  - "scripts"
+  - "references"
+  - "assets"
+  - "templates"
+  - "examples"
+  - "rules"

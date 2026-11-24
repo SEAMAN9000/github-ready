@@ -1,0 +1,39 @@
+# SKILL.md 里只属于某一个工具的内容。扫描整个 SKILL.md（含头部），逐行报行号。
+# 命中的一律标成 suspect，由人复查；判定标准见 references/readme-standard.md 末尾。
+signals:
+  - id: TOOLNAME
+    display: "某个工具独有的功能名"
+    advice: "换成不点名工具的说法（如「派一个子任务去做」），或写明没有 sub-agent 的工具上怎么办"
+    # 不收 Read / Write / Bash / Task 这类单独出现的日常英文词，会误报。
+    literals:
+      - "TodoWrite"
+      - "NotebookEdit"
+      - "AskUserQuestion"
+      - "SlashCommand"
+      - "ExitPlanMode"
+      - "EnterPlanMode"
+      - "WebFetch"
+      - "WebSearch"
+      - "Task 工具"
+      - "`Task`"
+      - "Agent 工具"
+      - "sub-agent"
+      - "子 agent"
+      - "子代理"
+      - "subagent"
+      - "/plugin marketplace"
+  - id: PATH
+    display: "某个工具专属的文件夹"
+    advice: "正文里不写死；确实要提就三个工具一起提，或改用相对本 skill 文件夹的路径"
+    literals:
+      - ".claude/agents/"
+      - ".claude/skills/"
+      - ".codex/skills/"
+      - ".agents/skills/"
+      - ".opencode/skills/"
+      - ".config/opencode/"
+# 项目说明文件：Claude Code 是 CLAUDE.md，另外两个是 AGENTS.md。只写了前者就报。
+memory_pair:
+  claude: "CLAUDE.md"
+  agents: "AGENTS.md"
+  advice: "写成「CLAUDE.md（Codex CLI / OpenCode 上是 AGENTS.md）」这样两边都交代"

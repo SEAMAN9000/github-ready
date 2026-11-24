@@ -1,0 +1,25 @@
+# README 第 2–8 节的标准标题。各节的完整要求见 references/readme-standard.md。
+# 第 1 节（标题 + 一句话）没有固定标题，由 checkup.py 直接检查。
+sections:
+  - id: s2
+    zh: "什么时候用"
+    en: "When to Use"
+  - id: s3
+    zh: "用起来长什么样"
+    en: "What It Looks Like"
+  - id: s4
+    zh: "Runtime 支持"
+    en: "Runtime Support"
+  - id: s5
+    zh: "安装"
+    en: "Install"
+  - id: s6
+    zh: "触发"
+    en: "Trigger"
+  - id: s7
+    zh: "跑完之后"
+    en: "After a Run"
+  - id: s8
+    zh: "License"
+    en: "License"
+license_keywords: [MIT, Apache, GPL, BSD, MPL, Unlicense]
